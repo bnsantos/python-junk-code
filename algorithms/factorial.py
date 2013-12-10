@@ -1,15 +1,11 @@
 __author__ = 'bruno'
-
-
-def validate_input(n):
-    if type(n) == type(int()) and n >= 0:
-        return True
-    else:
-        return False
+import sys
+sys.path.insert(0, '../helper')
+import helper.validateInput as ValidateInput
 
 
 def recursive(n):
-    if validate_input(n):
+    if ValidateInput.validate_integer_positive_input(n):
         if n == 0:
             return 1
         elif n == 1:
@@ -21,7 +17,7 @@ def recursive(n):
 
 
 def incremental(n):
-    if validate_input(n):
+    if ValidateInput.validate_integer_positive_input(n):
         fat = 1
         i = 1
         while i <= n:

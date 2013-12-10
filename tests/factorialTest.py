@@ -9,18 +9,6 @@ class TestFactorial(unittest.TestCase):
     def setUp(self):
         pass
 
-    def test_validate_input_negative(self):
-        self.assertEqual(False, Factorial.validate_input(-2))
-
-    def test_validate_input_positive(self):
-        self.assertEqual(True, Factorial.validate_input(2))
-
-    def test_validate_input_string(self):
-        self.assertEqual(False, Factorial.validate_input('oi'))
-
-    def test_validate_input_float(self):
-        self.assertEqual(False, Factorial.validate_input(2.0))
-
     def test_recursive_factorial1(self):
         self.assertEqual(1, Factorial.recursive(0))
 
