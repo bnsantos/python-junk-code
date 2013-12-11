@@ -7,6 +7,7 @@ from tests.palindromeTest import PalindromeTest
 from tests.bubbleSortTest import TestBubbleSort
 from tests.insertionSortTest import TestInsertionSort
 from tests.combSortTest import TestCombSort
+from tests.gnomeSortTest import TestGnomeSort
 
 
 def suite():
@@ -18,6 +19,7 @@ def suite():
     suite.addTest(unittest.makeSuite(TestBubbleSort))
     suite.addTest(unittest.makeSuite(TestInsertionSort))
     suite.addTest(unittest.makeSuite(TestCombSort))
+    suite.addTest(unittest.makeSuite(TestGnomeSort))
     return suite
 
 if __name__ == '__main__':
