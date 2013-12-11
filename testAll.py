@@ -10,6 +10,7 @@ from tests.combSortTest import TestCombSort
 from tests.gnomeSortTest import TestGnomeSort
 from tests.cocktailSortTest import TestCocktailSort
 from tests.oddEvenSortTest import TestOddEvenSort
+from tests.linearSearchTest import TestLinearSort
 
 
 def suite():
@@ -24,6 +25,7 @@ def suite():
     suite.addTest(unittest.makeSuite(TestGnomeSort))
     suite.addTest(unittest.makeSuite(TestCocktailSort))
     suite.addTest(unittest.makeSuite(TestOddEvenSort))
+    suite.addTest(unittest.makeSuite(TestLinearSort))
     return suite
 
 if __name__ == '__main__':
