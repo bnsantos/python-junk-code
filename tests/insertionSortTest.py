@@ -1,5 +1,5 @@
 __author__ = 'bruno'
-import algorithms.sort.insertion_sort as InsertionSort
+import algorithms.sort.insertionSort as InsertionSort
 import unittest
 
 

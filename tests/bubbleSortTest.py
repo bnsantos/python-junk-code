@@ -1,5 +1,5 @@
 __author__ = 'bruno'
-import algorithms.sort.bubble_sort as BubbleSort
+import algorithms.sort.bubbleSort as BubbleSort
 import unittest
 
 
