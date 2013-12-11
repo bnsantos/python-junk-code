@@ -5,6 +5,7 @@ from tests.factorialTest import TestFactorial
 from tests.fibonacciTest import TestFibonacci
 from tests.palindromeTest import PalindromeTest
 from tests.bubbleSortTest import TestBubbleSort
+from tests.insertionSortTest import TestInsertionSort
 
 
 def suite():
@@ -14,6 +15,7 @@ def suite():
     suite.addTest(unittest.makeSuite(TestFibonacci))
     suite.addTest(unittest.makeSuite(PalindromeTest))
     suite.addTest(unittest.makeSuite(TestBubbleSort))
+    suite.addTest(unittest.makeSuite(TestInsertionSort))
     return suite
 
 if __name__ == '__main__':
