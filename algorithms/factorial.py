@@ -5,6 +5,9 @@ import helper.validateInput as ValidateInput
 
 
 def recursive(n):
+    """
+        O(2^n) time complexity
+    """
     if ValidateInput.validate_integer_positive_input(n):
         if n == 0:
             return 1
