@@ -9,6 +9,7 @@ from tests.insertionSortTest import TestInsertionSort
 from tests.combSortTest import TestCombSort
 from tests.gnomeSortTest import TestGnomeSort
 from tests.cocktailSortTest import TestCocktailSort
+from tests.oddEvenSortTest import TestOddEvenSort
 
 
 def suite():
@@ -22,6 +23,7 @@ def suite():
     suite.addTest(unittest.makeSuite(TestCombSort))
     suite.addTest(unittest.makeSuite(TestGnomeSort))
     suite.addTest(unittest.makeSuite(TestCocktailSort))
+    suite.addTest(unittest.makeSuite(TestOddEvenSort))
     return suite
 
 if __name__ == '__main__':
