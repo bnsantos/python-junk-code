@@ -3,9 +3,9 @@ __author__ = 'bruno'
 
 def comb_sort(unordered):
     """
-        Worst case Ω(n^2)
+        Worst case Big Omega(n^2)
         Best case O(n)
-        Avg case Ω(n^2/2^P) - P is the number of increments
+        Avg case Big Omega(n^2/2^P) - P is the number of increments
         Worst case space O(1)
     """
     gap = len(unordered)
