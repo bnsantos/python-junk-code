@@ -12,6 +12,7 @@ from tests.cocktailSortTest import TestCocktailSort
 from tests.oddEvenSortTest import TestOddEvenSort
 from tests.linearSearchTest import TestLinearSort
 from tests.peasantMultiplicationTest import TestPeasantMultiplication
+from tests.leapYearTest import TestLeapYear
 
 
 def suite():
@@ -28,6 +29,7 @@ def suite():
     test_suite.addTest(unittest.makeSuite(TestOddEvenSort))
     test_suite.addTest(unittest.makeSuite(TestLinearSort))
     test_suite.addTest(unittest.makeSuite(TestPeasantMultiplication))
+    test_suite.addTest(unittest.makeSuite(TestLeapYear))
     return test_suite
 
 if __name__ == '__main__':
