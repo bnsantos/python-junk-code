@@ -15,6 +15,7 @@ from tests.peasantMultiplicationTest import TestPeasantMultiplication
 from tests.leapYearTest import TestLeapYear
 from tests.greatestCommonDivisor import TestGreatestCommonDivisor
 from tests.primeTest import TestPrimeNumber
+from tests.numbersTest import TestNumberYear
 
 
 def suite():
@@ -34,6 +35,7 @@ def suite():
     test_suite.addTest(unittest.makeSuite(TestLeapYear))
     test_suite.addTest(unittest.makeSuite(TestGreatestCommonDivisor))
     test_suite.addTest(unittest.makeSuite(TestPrimeNumber))
+    test_suite.addTest(unittest.makeSuite(TestNumberYear))
     return test_suite
 
 if __name__ == '__main__':
