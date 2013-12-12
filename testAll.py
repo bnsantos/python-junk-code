@@ -14,19 +14,19 @@ from tests.linearSearchTest import TestLinearSort
 
 
 def suite():
-    suite = unittest.TestSuite()
-    suite.addTest(unittest.makeSuite(ValidateInputTest))
-    suite.addTest(unittest.makeSuite(TestFactorial))
-    suite.addTest(unittest.makeSuite(TestFibonacci))
-    suite.addTest(unittest.makeSuite(PalindromeTest))
-    suite.addTest(unittest.makeSuite(TestBubbleSort))
-    suite.addTest(unittest.makeSuite(TestInsertionSort))
-    suite.addTest(unittest.makeSuite(TestCombSort))
-    suite.addTest(unittest.makeSuite(TestGnomeSort))
-    suite.addTest(unittest.makeSuite(TestCocktailSort))
-    suite.addTest(unittest.makeSuite(TestOddEvenSort))
-    suite.addTest(unittest.makeSuite(TestLinearSort))
-    return suite
+    test_suite = unittest.TestSuite()
+    test_suite.addTest(unittest.makeSuite(ValidateInputTest))
+    test_suite.addTest(unittest.makeSuite(TestFactorial))
+    test_suite.addTest(unittest.makeSuite(TestFibonacci))
+    test_suite.addTest(unittest.makeSuite(PalindromeTest))
+    test_suite.addTest(unittest.makeSuite(TestBubbleSort))
+    test_suite.addTest(unittest.makeSuite(TestInsertionSort))
+    test_suite.addTest(unittest.makeSuite(TestCombSort))
+    test_suite.addTest(unittest.makeSuite(TestGnomeSort))
+    test_suite.addTest(unittest.makeSuite(TestCocktailSort))
+    test_suite.addTest(unittest.makeSuite(TestOddEvenSort))
+    test_suite.addTest(unittest.makeSuite(TestLinearSort))
+    return test_suite
 
 if __name__ == '__main__':
     unittest.TextTestRunner(verbosity=2).run(suite())

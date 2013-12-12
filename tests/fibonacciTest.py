@@ -1,7 +1,5 @@
 __author__ = 'bruno'
 import unittest
-import sys
-sys.path.insert(0, '../algorithms')
 import algorithms.fibonacci as Fibonacci
 
 

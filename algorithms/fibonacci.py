@@ -1,6 +1,4 @@
 __author__ = 'bruno'
-import sys
-sys.path.insert(0, '../helper')
 import helper.validateInput as ValidateInput
 
 
