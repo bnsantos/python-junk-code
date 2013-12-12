@@ -13,6 +13,9 @@ class ValidateInputTest(unittest.TestCase):
     def test_validate_integer_positive_input_positive(self):
         self.assertEqual(True, ValidatedInput.validate_integer_positive_input(2))
 
+    def test_validate_integer_positive_input_positive(self):
+        self.assertEqual(True, ValidatedInput.validate_integer_positive_input(21329841928749128))
+
     def test_validate_integer_positive_input_string(self):
         self.assertEqual(False, ValidatedInput.validate_integer_positive_input('oi'))
 
@@ -30,3 +33,6 @@ class ValidateInputTest(unittest.TestCase):
 
     def test_validate_string_input_string(self):
         self.assertEqual(True, ValidatedInput.validate_string_input('hi'))
+
+    def test_validate_string_input_string2(self):
+        self.assertEqual(True, ValidatedInput.validate_string_input('hiuasddhasfasdhfkjasdhfiu  aksdjfhkajsdf'))

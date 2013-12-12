@@ -16,6 +16,12 @@ class TestFibonacci(unittest.TestCase):
     def test_recursive_fibonacci3(self):
         self.assertEqual(6765, Fibonacci.recursive(20))
 
+    def test_recursive_fibonacci4(self):
+        self.assertEqual(4181, Fibonacci.recursive(19))
+
+    def test_recursive_fibonacci5(self):
+        self.assertEqual(28657, Fibonacci.recursive(23))
+
     def test_incremental_fibonacci1(self):
         self.assertEqual(0, Fibonacci.incremental(0))
 
@@ -26,4 +32,7 @@ class TestFibonacci(unittest.TestCase):
         self.assertEqual(6765, Fibonacci.incremental(20))
 
     def test_incremental_fibonacci4(self):
-        self.assertEqual(13, Fibonacci.incremental(7))
+        self.assertEqual(1548008755920, Fibonacci.incremental(60))
+
+    def test_incremental_fibonacci5(self):
+        self.assertEqual(433494437, Fibonacci.incremental(43))

@@ -24,3 +24,15 @@ class TestBubbleSort(unittest.TestCase):
 
     def test_bubble_sort6(self):
         self.assertEqual(['a', 'b', 'c'], BubbleSort.bubble(['c', 'a', 'b']))
+
+    def test_bubble_sort7(self):
+        self.assertEqual(['A', 'B', 'a', 'b'], BubbleSort.bubble(['B', 'a', 'A', 'b']))
+
+    def test_bubble_sort8(self):
+        self.assertEqual([1, 4, 5, 6, 7, 8, 9], BubbleSort.bubble([5, 7, 4, 1, 8, 6, 9]))
+
+    def test_bubble_sort9(self):
+        self.assertEqual([567, 678, 765, 789, 876, 987], BubbleSort.bubble([987, 789, 678, 876, 567, 765]))
+
+    def test_bubble_sort10(self):
+        self.assertEqual(['a', 'g', 'k', 't'], BubbleSort.bubble(['k', 'g', 'a', 't']))
