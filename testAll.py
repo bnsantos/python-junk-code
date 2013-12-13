@@ -18,6 +18,7 @@ from tests.primeTest import TestPrimeNumber
 from tests.numbersTest import TestNumberYear
 from tests.abacusTest import TestAbacus
 from tests.selectionSortTest import TestSelectionSort
+from tests.selectionSearchTest import TestSelectionSearch
 
 
 def suite():
@@ -40,6 +41,7 @@ def suite():
     test_suite.addTest(unittest.makeSuite(TestNumberYear))
     test_suite.addTest(unittest.makeSuite(TestAbacus))
     test_suite.addTest(unittest.makeSuite(TestSelectionSort))
+    test_suite.addTest(unittest.makeSuite(TestSelectionSearch))
     return test_suite
 
 if __name__ == '__main__':
