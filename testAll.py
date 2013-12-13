@@ -21,6 +21,7 @@ from tests.selectionSortTest import TestSelectionSort
 from tests.selectionSearchTest import TestSelectionSearch
 from tests.patienceSortTest import TestPatienceSort
 from tests.quickSortTest import TestQuickSort
+from tests.stoogeSortTest import TestStoogeSort
 
 
 def suite():
@@ -46,6 +47,7 @@ def suite():
     test_suite.addTest(unittest.makeSuite(TestSelectionSearch))
     test_suite.addTest(unittest.makeSuite(TestPatienceSort))
     test_suite.addTest(unittest.makeSuite(TestQuickSort))
+    test_suite.addTest(unittest.makeSuite(TestStoogeSort))
     return test_suite
 
 if __name__ == '__main__':
