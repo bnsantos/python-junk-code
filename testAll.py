@@ -16,6 +16,7 @@ from tests.leapYearTest import TestLeapYear
 from tests.greatestCommonDivisor import TestGreatestCommonDivisor
 from tests.primeTest import TestPrimeNumber
 from tests.numbersTest import TestNumberYear
+from tests.abacusTest import TestAbacus
 
 
 def suite():
@@ -36,6 +37,7 @@ def suite():
     test_suite.addTest(unittest.makeSuite(TestGreatestCommonDivisor))
     test_suite.addTest(unittest.makeSuite(TestPrimeNumber))
     test_suite.addTest(unittest.makeSuite(TestNumberYear))
+    test_suite.addTest(unittest.makeSuite(TestAbacus))
     return test_suite
 
 if __name__ == '__main__':
