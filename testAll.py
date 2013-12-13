@@ -17,7 +17,7 @@ from tests.greatestCommonDivisor import TestGreatestCommonDivisor
 from tests.primeTest import TestPrimeNumber
 from tests.numbersTest import TestNumberYear
 from tests.abacusTest import TestAbacus
-from tests.selectionSort import TestSelectionSort
+from tests.selectionSortTest import TestSelectionSort
 
 
 def suite():
