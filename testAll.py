@@ -17,6 +17,7 @@ from tests.greatestCommonDivisor import TestGreatestCommonDivisor
 from tests.primeTest import TestPrimeNumber
 from tests.numbersTest import TestNumberYear
 from tests.abacusTest import TestAbacus
+from tests.selectionSort import TestSelectionSort
 
 
 def suite():
@@ -38,6 +39,7 @@ def suite():
     test_suite.addTest(unittest.makeSuite(TestPrimeNumber))
     test_suite.addTest(unittest.makeSuite(TestNumberYear))
     test_suite.addTest(unittest.makeSuite(TestAbacus))
+    test_suite.addTest(unittest.makeSuite(TestSelectionSort))
     return test_suite
 
 if __name__ == '__main__':
