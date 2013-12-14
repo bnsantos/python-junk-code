@@ -24,6 +24,7 @@ from tests.quickSortTest import TestQuickSort
 from tests.stoogeSortTest import TestStoogeSort
 from tests.connectedComponentsTest import TestConnectedComponents
 from tests.clusteringCoefficientTest import TestClusteringCoefficient
+from tests.breadthFirstSearchTest import TestBreadthFirstSearch
 
 
 def suite():
@@ -52,6 +53,7 @@ def suite():
     test_suite.addTest(unittest.makeSuite(TestStoogeSort))
     test_suite.addTest(unittest.makeSuite(TestConnectedComponents))
     test_suite.addTest(unittest.makeSuite(TestClusteringCoefficient))
+    test_suite.addTest(unittest.makeSuite(TestBreadthFirstSearch))
     return test_suite
 
 if __name__ == '__main__':
