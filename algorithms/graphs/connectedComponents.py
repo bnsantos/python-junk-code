@@ -10,7 +10,7 @@ def mark_component(graph, node, marked):
     return total_marked
 
 
-def list_component_sizes(graph):
+def list_component_number_of_vertices(graph):
     marked = {}
     components = {}
     for node in graph.keys():
