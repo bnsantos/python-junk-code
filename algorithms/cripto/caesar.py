@@ -18,4 +18,10 @@ class Caesar:
         return cipher
 
     def decrypt(self, msg, key=3):
-        pass
+        plain_text = ''
+        cypher = msg.upper()
+        for ch in cypher:
+            if ch in self.__letters:
+                idx = self.__letters.find(ch) - key
+                plain_text += self.__letters[idx]
+        return plain_text.lower()
