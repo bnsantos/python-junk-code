@@ -27,6 +27,7 @@ from tests.clusteringCoefficientTest import TestClusteringCoefficient
 from tests.breadthFirstSearchTest import TestBreadthFirstSearch
 from tests.knapsackTest import TestKnapsack
 from tests.caesarTest import TestCaesar
+from tests.maximumTest import TestMaximum
 
 
 def suite():
@@ -58,6 +59,7 @@ def suite():
     test_suite.addTest(unittest.makeSuite(TestBreadthFirstSearch))
     test_suite.addTest(unittest.makeSuite(TestKnapsack))
     test_suite.addTest(unittest.makeSuite(TestCaesar))
+    test_suite.addTest(unittest.makeSuite(TestMaximum))
     return test_suite
 
 if __name__ == '__main__':
