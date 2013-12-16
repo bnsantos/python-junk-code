@@ -30,6 +30,7 @@ from tests.caesarTest import TestCaesar
 from tests.maximumTest import TestMaximum
 from tests.minimumTest import TestMinimum
 from tests.midpointTest import TestMidpoint
+from tests.meanTest import TestMean
 
 
 def suite():
@@ -64,6 +65,7 @@ def suite():
     test_suite.addTest(unittest.makeSuite(TestMaximum))
     test_suite.addTest(unittest.makeSuite(TestMinimum))
     test_suite.addTest(unittest.makeSuite(TestMidpoint))
+    test_suite.addTest(unittest.makeSuite(TestMean))
     return test_suite
 
 if __name__ == '__main__':
