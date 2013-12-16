@@ -32,6 +32,7 @@ from tests.minimumTest import TestMinimum
 from tests.midpointTest import TestMidpoint
 from tests.meanTest import TestMean
 from tests.medianTest import TestMedian
+from tests.mostPopularName import TestMostPopularName
 
 
 def suite():
@@ -68,6 +69,7 @@ def suite():
     test_suite.addTest(unittest.makeSuite(TestMidpoint))
     test_suite.addTest(unittest.makeSuite(TestMean))
     test_suite.addTest(unittest.makeSuite(TestMedian))
+    test_suite.addTest(unittest.makeSuite(TestMostPopularName))
     return test_suite
 
 if __name__ == '__main__':
