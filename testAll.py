@@ -28,6 +28,7 @@ from tests.breadthFirstSearchTest import TestBreadthFirstSearch
 from tests.knapsackTest import TestKnapsack
 from tests.caesarTest import TestCaesar
 from tests.maximumTest import TestMaximum
+from tests.minimumTest import TestMinimum
 
 
 def suite():
@@ -60,6 +61,7 @@ def suite():
     test_suite.addTest(unittest.makeSuite(TestKnapsack))
     test_suite.addTest(unittest.makeSuite(TestCaesar))
     test_suite.addTest(unittest.makeSuite(TestMaximum))
+    test_suite.addTest(unittest.makeSuite(TestMinimum))
     return test_suite
 
 if __name__ == '__main__':
