@@ -41,7 +41,7 @@ def read_file(filename):
         for i in range(len(comics[comic_book])):
             for j in range(i+1, len(comics[comic_book])):
                 make_link(graph, comics[comic_book][i], comics[comic_book][j])
-                print comic_book, comics[comic_book][i], comics[comic_book][j]
+                #print comic_book, comics[comic_book][i], comics[comic_book][j]
 
     return graph
 
