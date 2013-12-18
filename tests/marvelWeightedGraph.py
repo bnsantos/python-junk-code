@@ -7,6 +7,7 @@ import time
 def highest_strength(graph):
     return max((s, x, y) for x, links in graph.items() for y, s in links.items())
 
+
 #Function to create a bidirectional edge between nodes supplied as arguments in graph
 def make_link(graph, node1, node2):
     if node1 not in graph:
@@ -38,7 +39,7 @@ def read_file(filename):
 
     for comic_book in comics:
         for i in range(len(comics[comic_book])):
-            for j in range(i, len(comics[comic_book])):
+            for j in range(i+1, len(comics[comic_book])):
                 make_link(graph, comics[comic_book][i], comics[comic_book][j])
                 print comic_book, comics[comic_book][i], comics[comic_book][j]
 
@@ -46,6 +47,6 @@ def read_file(filename):
 
 
 start_time = time.time()
-graph = read_file('../input/marvel.tsv')
-print highest_strength(graph)
+marvel_graph = read_file('../input/marvel.tsv')
+print highest_strength(marvel_graph)
 print "running time:", time.time() - start_time
