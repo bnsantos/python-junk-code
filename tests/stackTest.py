@@ -8,7 +8,7 @@ class TestStack(unittest.TestCase):
         pass
 
     def test_stack_lifo_1(self):
-        stack = Stack.StackLIFO(Stack.Element(5))
+        stack = Stack.StackFIFO(Stack.Element(5))
         stack.push(Stack.Element(4))
         stack.push(Stack.Element(3))
         stack.push(Stack.Element(2))
@@ -21,7 +21,7 @@ class TestStack(unittest.TestCase):
         self.assertEqual(True, stack.empty())
 
     def test_stack_lifo_2(self):
-        stack = Stack.StackLIFO(Stack.Element(0))
+        stack = Stack.StackFIFO(Stack.Element(0))
         for i in range(1, 11):
             stack.push(Stack.Element(i))
 
@@ -30,7 +30,7 @@ class TestStack(unittest.TestCase):
         self.assertEqual(True, stack.empty())
 
     def test_stack_lifo_3(self):
-        stack = Stack.StackLIFO(Stack.Element(0))
+        stack = Stack.StackFIFO(Stack.Element(0))
         for i in range(1, 201):
             stack.push(Stack.Element(i))
 
@@ -39,14 +39,14 @@ class TestStack(unittest.TestCase):
         self.assertEqual(True, stack.empty())
 
     def test_stack_lifo_4(self):
-        stack = Stack.StackLIFO(Stack.Element(0))
+        stack = Stack.StackFIFO(Stack.Element(0))
         for i in range(1, 500):
             stack.push(Stack.Element(i))
 
         self.assertEqual(500, stack.count())
 
     def test_stack_lifo_5(self):
-        stack = Stack.StackLIFO(Stack.Element(0))
+        stack = Stack.StackFIFO(Stack.Element(0))
         for i in range(1, 500):
             stack.push(Stack.Element(i))
         self.assertEqual(500, stack.count())
@@ -56,7 +56,7 @@ class TestStack(unittest.TestCase):
         self.assertEqual(400, stack.count())
 
     def test_stack_lifo_6(self):
-        stack = Stack.StackLIFO(Stack.Element(0))
+        stack = Stack.StackFIFO(Stack.Element(0))
         for i in range(1, 500):
             stack.push(Stack.Element(i))
         self.assertEqual(500, stack.count())
@@ -66,7 +66,7 @@ class TestStack(unittest.TestCase):
         self.assertEqual(200, stack.count())
 
     def test_stack_lifo_7(self):
-        stack = Stack.StackLIFO(Stack.Element(0))
+        stack = Stack.StackFIFO(Stack.Element(0))
         for i in range(1, 500):
             stack.push(Stack.Element(i))
         self.assertEqual(500, stack.count())
@@ -76,7 +76,7 @@ class TestStack(unittest.TestCase):
         self.assertEqual(150, stack.count())
 
     def test_stack_lifo_8(self):
-        stack = Stack.StackLIFO(Stack.Element(0))
+        stack = Stack.StackFIFO(Stack.Element(0))
         for i in range(1, 500):
             stack.push(Stack.Element(i))
         self.assertEqual(500, stack.count())
@@ -90,7 +90,7 @@ class TestStack(unittest.TestCase):
         self.assertEqual(0, stack.count())
 
     def test_stack_lifo_9(self):
-        stack = Stack.StackLIFO(Stack.Element(0))
+        stack = Stack.StackFIFO(Stack.Element(0))
         for i in range(1, 500):
             stack.push(Stack.Element(i))
         self.assertEqual(500, stack.count())
@@ -100,7 +100,7 @@ class TestStack(unittest.TestCase):
         self.assertEqual(150, stack.count())
 
     def test_stack_lifo_10(self):
-        stack = Stack.StackLIFO(Stack.Element(0))
+        stack = Stack.StackFIFO(Stack.Element(0))
         for i in range(1, 500):
             stack.push(Stack.Element(i))
         self.assertEqual(500, stack.count())

@@ -10,8 +10,8 @@ class Element():
         self.next = next_elem
 
 
-#LIFO - last in first out
-class StackLIFO:
+#FIFO - last in first out
+class StackFIFO:
     def __init__(self, elem):
         self.first = elem
         self.last = elem
