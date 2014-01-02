@@ -36,6 +36,7 @@ from tests.mostPopularName import TestMostPopularName
 from tests.rankTest import TestRank
 from tests.topKTest import TestTopK
 from tests.modeTest import TestMode
+from tests.stackTest import TestStack
 
 
 def suite():
@@ -76,6 +77,7 @@ def suite():
     test_suite.addTest(unittest.makeSuite(TestRank))
     test_suite.addTest(unittest.makeSuite(TestTopK))
     test_suite.addTest(unittest.makeSuite(TestMode))
+    test_suite.addTest(unittest.makeSuite(TestStack))
     return test_suite
 
 if __name__ == '__main__':
