@@ -2,19 +2,30 @@ __author__ = 'bruno'
 import os
 import filecmp
 import shutil
+from PIL import Image
 
-
-#files_dir = '/home/bruno/Downloads/wazap videos/'
-#repeated_files_dir = '/home/bruno/Downloads/wazap videos/repeated/'
 
 files_dir = '/home/bruno/Downloads/Wazapphotos/'
 repeated_files_dir = '/home/bruno/Downloads/Wazapphotos/repeated/'
 
 
+def av_hash(im):
+    if not isinstance(im, Image.Image):
+        im = Image.open(im)
+    im = im.resize((8, 8), Image.ANTIALIAS).convert('L')
+    avg = reduce(lambda x, y: x + y, im.getdata()) / 64.
+    return reduce(lambda x, (y, z): x | (z << y),
+                  enumerate(map(lambda i: 0 if i < avg else 1, im.getdata())),
+                  0)
+
+
 def check_files():
     sizes = {}
     for f in os.listdir(files_dir):
-        file_size = os.stat(files_dir + f).st_size
+        print files_dir + f
+        if f == 'repeated':
+            continue
+        file_size = av_hash(files_dir + f) #os.stat(files_dir + f).st_size
         if file_size not in sizes:
             sizes[file_size] = [f]
         else:
