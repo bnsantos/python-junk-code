@@ -10,7 +10,7 @@ class Element():
         self.next = next_elem
 
 
-#FIFO - last in first out
+#FIFO - first in first out
 class StackFIFO:
     def __init__(self, elem):
         self.first = elem
@@ -35,4 +35,31 @@ class StackFIFO:
         return self.elements
 
     def empty(self):
-        return self.elements==0
+        return self.elements == 0
+
+
+#LIFO - last in first out
+class StackLIFO:
+    def __init__(self, elem):
+        self.elements = 1
+        self.first = elem
+
+    def pop(self):
+        if self.elements > 0:
+            self.elements -= 1
+            pop = self.first
+            self.first = self.first.next
+            return pop.value
+        else:
+            return None
+
+    def push(self, elem):
+        self.elements += 1
+        elem.set_next(self.first)
+        self.first = elem
+
+    def count(self):
+        return self.elements
+
+    def empty(self):
+        return self.elements == 0
