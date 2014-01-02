@@ -18,10 +18,13 @@ class StackFIFO:
         self.elements = 1
 
     def pop(self):
-        self.elements -= 1
-        pop = self.first
-        self.first = self.first.next
-        return pop.value
+        if self.elements > 0:
+            self.elements -= 1
+            pop = self.first
+            self.first = self.first.next
+            return pop.value
+        else:
+            return None
 
     def push(self, elem):
         self.elements += 1

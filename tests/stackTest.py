@@ -105,10 +105,8 @@ class TestStack(unittest.TestCase):
             stack.push(Stack.Element(i))
         self.assertEqual(500, stack.count())
 
-        for i in range(300):
-            self.assertEqual(i, stack.pop())
-        self.assertEqual(200, stack.count())
-
-        for i in range(300, 500):
+        for i in range(500):
             self.assertEqual(i, stack.pop())
         self.assertEqual(0, stack.count())
+
+        self.assertEqual(None, stack.pop())
