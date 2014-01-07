@@ -37,6 +37,7 @@ from tests.rankTest import TestRank
 from tests.topKTest import TestTopK
 from tests.modeTest import TestMode
 from tests.stackTest import TestStack
+from tests.linkedListTest import TestLinkedList
 
 
 def suite():
@@ -78,6 +79,7 @@ def suite():
     test_suite.addTest(unittest.makeSuite(TestTopK))
     test_suite.addTest(unittest.makeSuite(TestMode))
     test_suite.addTest(unittest.makeSuite(TestStack))
+    test_suite.addTest(unittest.makeSuite(TestLinkedList))
     return test_suite
 
 if __name__ == '__main__':
