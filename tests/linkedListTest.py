@@ -1,6 +1,7 @@
 __author__ = 'bruno'
-import algorithms.linkedList as LinkedList
 import unittest
+
+import algorithms.lists.linkedList as LinkedList
 
 
 class TestLinkedList(unittest.TestCase):

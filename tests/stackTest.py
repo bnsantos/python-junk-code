@@ -1,6 +1,7 @@
 __author__ = 'bruno'
-import algorithms.stack as Stack
 import unittest
+
+import algorithms.lists.stack as Stack
 
 
 class TestStack(unittest.TestCase):
