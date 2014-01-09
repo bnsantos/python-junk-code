@@ -1,6 +1,6 @@
 __author__ = 'bruno'
 import unittest
-import algorithms.fibonacci as Fibonacci
+import algorithms.math.fibonacci as Fibonacci
 
 
 class TestFibonacci(unittest.TestCase):

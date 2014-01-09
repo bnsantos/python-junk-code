@@ -1,6 +1,6 @@
 __author__ = 'bruno'
 import unittest
-import algorithms.factorial as Factorial
+import algorithms.math.factorial as Factorial
 
 
 class TestFactorial(unittest.TestCase):

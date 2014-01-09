@@ -1,6 +1,7 @@
 __author__ = 'bruno'
-import algorithms.greatestCommonDivisor as GreatestCommonDivisor
 import unittest
+
+import algorithms.math.greatestCommonDivisor as GreatestCommonDivisor
 
 
 class TestGreatestCommonDivisor(unittest.TestCase):

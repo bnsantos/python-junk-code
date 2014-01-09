@@ -1,6 +1,6 @@
 __author__ = 'bruno'
 import unittest
-import algorithms.palindrome as Palindrome
+import algorithms.string.palindrome as Palindrome
 
 
 class PalindromeTest(unittest.TestCase):

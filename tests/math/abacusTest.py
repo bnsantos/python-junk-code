@@ -1,6 +1,7 @@
 __author__ = 'bruno'
-import algorithms.abacus as Abacus
 import unittest
+
+import algorithms.math.abacus as Abacus
 
 
 class TestAbacus(unittest.TestCase):
