@@ -108,7 +108,6 @@ class TestTrees(unittest.TestCase):
         self.assertEqual(None, b_tree.find_node(20))
         self.assertEqual(False, b_tree.delete_node(Trees.IntNode(None, None, 20)))
 
-
     def test_binary_tree_7(self):
         b_tree = Trees.BinaryTree(Trees.IntNode(None, None, 8))
         b_tree.add_node(Trees.IntNode(None, None, 20))
@@ -130,3 +129,54 @@ class TestTrees(unittest.TestCase):
         self.assertEqual(13, b_tree.find_node(13))
         self.assertEqual(True, b_tree.delete_node(Trees.IntNode(None, None, 13)))
         self.assertEqual(None, b_tree.find_node(13))
+
+    def test_binary_tree_8(self):
+        b_tree = Trees.BinaryTree(Trees.IntNode(None, None, 8))
+        b_tree.add_node(Trees.IntNode(None, None, 20))
+        b_tree.add_node(Trees.IntNode(None, None, 4))
+        b_tree.add_node(Trees.IntNode(None, None, 13))
+        b_tree.add_node(Trees.IntNode(None, None, 22))
+        b_tree.add_node(Trees.IntNode(None, None, 9))
+        b_tree.add_node(Trees.IntNode(None, None, 17))
+        b_tree.add_node(Trees.IntNode(None, None, 10))
+        b_tree.add_node(Trees.IntNode(None, None, 8))
+        b_tree.add_node(Trees.IntNode(None, None, 15))
+        b_tree.add_node(Trees.IntNode(None, None, 19))
+        b_tree.add_node(Trees.IntNode(None, None, 13))
+        b_tree.add_node(Trees.IntNode(None, None, 16))
+
+        self.assertEqual([8, 4, 20, 13, 9, 8, 10, 17, 15, 13, 16, 19, 22], b_tree.print_pre_order())
+
+    def test_binary_tree_9(self):
+        b_tree = Trees.BinaryTree(Trees.IntNode(None, None, 8))
+        b_tree.add_node(Trees.IntNode(None, None, 20))
+        b_tree.add_node(Trees.IntNode(None, None, 4))
+        b_tree.add_node(Trees.IntNode(None, None, 13))
+        b_tree.add_node(Trees.IntNode(None, None, 22))
+        b_tree.add_node(Trees.IntNode(None, None, 9))
+        b_tree.add_node(Trees.IntNode(None, None, 17))
+        b_tree.add_node(Trees.IntNode(None, None, 10))
+        b_tree.add_node(Trees.IntNode(None, None, 8))
+        b_tree.add_node(Trees.IntNode(None, None, 15))
+        b_tree.add_node(Trees.IntNode(None, None, 19))
+        b_tree.add_node(Trees.IntNode(None, None, 13))
+        b_tree.add_node(Trees.IntNode(None, None, 16))
+
+        self.assertEqual([4, 8, 8, 9, 10, 13, 13, 15, 16, 17, 19, 20, 22], b_tree.print_in_order())
+
+    def test_binary_tree_10(self):
+        b_tree = Trees.BinaryTree(Trees.IntNode(None, None, 8))
+        b_tree.add_node(Trees.IntNode(None, None, 20))
+        b_tree.add_node(Trees.IntNode(None, None, 4))
+        b_tree.add_node(Trees.IntNode(None, None, 13))
+        b_tree.add_node(Trees.IntNode(None, None, 22))
+        b_tree.add_node(Trees.IntNode(None, None, 9))
+        b_tree.add_node(Trees.IntNode(None, None, 17))
+        b_tree.add_node(Trees.IntNode(None, None, 10))
+        b_tree.add_node(Trees.IntNode(None, None, 8))
+        b_tree.add_node(Trees.IntNode(None, None, 15))
+        b_tree.add_node(Trees.IntNode(None, None, 19))
+        b_tree.add_node(Trees.IntNode(None, None, 13))
+        b_tree.add_node(Trees.IntNode(None, None, 16))
+
+        #self.assertEqual([4, 8, 10, 9, 13, 16, 15, 19, 17, 13, 22, 20, 8], b_tree.print_post_order())

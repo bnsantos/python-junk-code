@@ -111,3 +111,36 @@ class BinaryTree(object):
             current.set_value(successor.get_value())
             return self.delete_node(successor, current.get_right())
             return True
+
+    def print_pre_order(self):
+        to_visit = [self.root]
+        pre_order = []
+        while to_visit:
+            current = to_visit.pop()
+            pre_order.append(current.get_value())
+            if current.get_right():
+                to_visit.append(current.get_right())
+            if current.get_left():
+                to_visit.append(current.get_left())
+        return pre_order
+
+    def print_in_order(self):
+        parent_stack = []
+        to_visit = [self.root]
+        in_order = []
+        while to_visit or parent_stack:
+            if to_visit:
+                current = to_visit.pop()
+                while current.get_left():
+                    parent_stack.append(current)
+                    current = current.get_left()
+            else:
+                current = parent_stack.pop()
+
+            in_order.append(current.get_value())
+            if current.get_right():
+                to_visit.append(current.get_right())
+        return in_order
+
+    def print_post_order(self):
+        pass
