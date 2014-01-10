@@ -26,7 +26,7 @@ class IntNode(object):
         self.right = node
 
 
-class BinaryTree(object):
+class BinarySearchTree(object):
     def __init__(self, root):
         self.root = root
 
@@ -107,7 +107,7 @@ class BinaryTree(object):
                 parent.set_right(current.get_left())
             return True
         else:
-            successor = BinaryTree.find_min(current.get_right())
+            successor = BinarySearchTree.find_min(current.get_right())
             current.set_value(successor.get_value())
             return self.delete_node(successor, current.get_right())
             return True
