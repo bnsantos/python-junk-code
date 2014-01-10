@@ -1,7 +1,7 @@
 __author__ = 'bruno'
 
 
-class IntNode(object):
+class IntBinaryNode(object):
     def __init__(self, children_left, children_right, value):
         self.left = children_left
         self.right = children_right
@@ -160,3 +160,45 @@ class BinarySearchTree(object):
                     post_order.append(visited.get_value())
                     last_node_visited = peek_node
         return post_order
+
+
+class IntNode(object):
+    def __init__(self, children, value):
+        self.children = children
+        self.value = value
+
+    def get_value(self):
+        return self.value
+
+    def set_value(self, value):
+        self.value = value
+
+    def get_child(self, index):
+        return self.children[index]
+
+    def get_children(self):
+        return self.children
+
+    def get_child_num(self):
+        return len(self.children)
+
+    def add_child(self, child):
+        self.children.append(child)
+
+
+class Tree(object):
+    def __init__(self, node):
+        self.root = node
+
+    def breadth_first_search(self, value):
+        to_visit = [self.root]
+        while to_visit:
+            current = to_visit.pop()
+            if current.get_value() == value:
+                return True
+            else:
+                children = current.get_children()
+                if children:
+                    children = children[::-1]
+                    to_visit = children + to_visit
+        return False
