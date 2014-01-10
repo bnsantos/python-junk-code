@@ -202,3 +202,16 @@ class Tree(object):
                     children = children[::-1]
                     to_visit = children + to_visit
         return False
+
+    def depth_first_search(self, value):
+        to_visit = [self.root]
+        while to_visit:
+            current = to_visit.pop()
+            if current.get_value() == value:
+                return True
+            else:
+                children = current.get_children()
+                if children:
+                    children = children[::-1]
+                    to_visit = to_visit + children
+        return False
