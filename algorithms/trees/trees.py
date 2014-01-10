@@ -143,4 +143,20 @@ class BinaryTree(object):
         return in_order
 
     def print_post_order(self):
-        pass
+        current = self.root
+        parent_stack = []
+        post_order = []
+        last_node_visited = None
+        while parent_stack or current is not None:
+            if current:
+                parent_stack.append(current)
+                current = current.get_left()
+            else:
+                peek_node = parent_stack[len(parent_stack)-1]
+                if peek_node.get_right() and last_node_visited != peek_node.get_right():
+                    current = peek_node.get_right()
+                else:
+                    visited = parent_stack.pop()
+                    post_order.append(visited.get_value())
+                    last_node_visited = peek_node
+        return post_order

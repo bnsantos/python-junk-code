@@ -1,6 +1,7 @@
 __author__ = 'bruno'
-import algorithms.trees.trees as Trees
 import unittest
+
+import algorithms.trees.trees as Trees
 
 
 class TestTrees(unittest.TestCase):
@@ -179,4 +180,4 @@ class TestTrees(unittest.TestCase):
         b_tree.add_node(Trees.IntNode(None, None, 13))
         b_tree.add_node(Trees.IntNode(None, None, 16))
 
-        #self.assertEqual([4, 8, 10, 9, 13, 16, 15, 19, 17, 13, 22, 20, 8], b_tree.print_post_order())
+        self.assertEqual([4, 8, 10, 9, 13, 16, 15, 19, 17, 13, 22, 20, 8], b_tree.print_post_order())
