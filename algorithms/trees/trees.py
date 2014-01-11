@@ -215,3 +215,19 @@ class Tree(object):
                     children = children[::-1]
                     to_visit = to_visit + children
         return False
+
+    def get_height(self):
+        to_visit = [[self.root, 1]]
+        max_height = 0
+        while to_visit:
+            current = to_visit.pop()
+            children = current[0].get_children()
+            if children:
+                children = children[::-1]
+                children_to_visit = []
+                for child in children:
+                    if max_height < current[1]+1:
+                        max_height = current[1]+1
+                    children_to_visit.append([child, current[1]+1])
+                to_visit = to_visit + children_to_visit
+        return max_height
