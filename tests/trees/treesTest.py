@@ -182,6 +182,21 @@ class TestTrees(unittest.TestCase):
 
         self.assertEqual([4, 8, 10, 9, 13, 16, 15, 19, 17, 13, 22, 20, 8], b_tree.print_post_order())
 
+    def test_binary_search_tree_11(self):
+        b_tree = Trees.BinarySearchTree(Trees.IntBinaryNode(None, None, 8))
+        b_tree.add_node(Trees.IntBinaryNode(None, None, 20))
+        b_tree.add_node(Trees.IntBinaryNode(None, None, 4))
+        b_tree.add_node(Trees.IntBinaryNode(None, None, 13))
+        b_tree.add_node(Trees.IntBinaryNode(None, None, 22))
+        b_tree.add_node(Trees.IntBinaryNode(None, None, 9))
+        b_tree.add_node(Trees.IntBinaryNode(None, None, 17))
+        b_tree.add_node(Trees.IntBinaryNode(None, None, 10))
+        b_tree.add_node(Trees.IntBinaryNode(None, None, 8))
+        b_tree.add_node(Trees.IntBinaryNode(None, None, 15))
+        b_tree.add_node(Trees.IntBinaryNode(None, None, 19))
+
+        self.assertEqual(13, b_tree.lowest_common_ancestor(10, 19))
+
     def test_bfs_tree_1(self):
         root = Trees.IntNode([], 10)
         root.add_child(Trees.IntNode([Trees.IntNode([], 4), Trees.IntNode([], 2),

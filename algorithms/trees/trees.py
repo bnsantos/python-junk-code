@@ -161,6 +161,18 @@ class BinarySearchTree(object):
                     last_node_visited = peek_node
         return post_order
 
+    def lowest_common_ancestor(self, node1_value, node2_value):
+        current = self.root
+
+        while current:
+            if current.get_value() > node1_value and current.get_value() > node2_value:
+                current = current.get_left()
+            elif current.get_value() < node1_value and current.get_value() < node2_value:
+                current = current.get_right()
+            else:
+                return current.get_value()
+        return None
+
 
 class IntNode(object):
     def __init__(self, children, value):
