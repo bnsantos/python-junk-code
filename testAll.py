@@ -38,7 +38,8 @@ from tests.statistics.topKTest import TestTopK
 from tests.statistics.modeTest import TestMode
 from tests.lists.stackTest import TestStack
 from tests.lists.linkedListTest import TestLinkedList
-from tests.trees.treesTest import TestTrees
+from tests.trees.searchTreeTest import TestTrees
+from tests.trees.binarySearchTreeTest import TestBinarySearchTrees
 from tests.graphs.dijskstraTest import TestDijkstra
 
 
@@ -83,6 +84,7 @@ def suite():
     test_suite.addTest(unittest.makeSuite(TestStack))
     test_suite.addTest(unittest.makeSuite(TestLinkedList))
     test_suite.addTest(unittest.makeSuite(TestTrees))
+    test_suite.addTest(unittest.makeSuite(TestBinarySearchTrees))
     test_suite.addTest(unittest.makeSuite(TestDijkstra))
     return test_suite
 
