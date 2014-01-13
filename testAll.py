@@ -43,6 +43,7 @@ from tests.trees.binarySearchTreeTest import TestBinarySearchTrees
 from tests.graphs.dijskstraTest import TestDijkstra
 from tests.trees.binaryTreeTest import TestBinaryTrees
 from tests.graphs.longSimplePathTest import TestLongSimplePath
+from tests.graphs.complementGraphTest import TestComplementGraph
 
 
 def suite():
@@ -90,6 +91,7 @@ def suite():
     test_suite.addTest(unittest.makeSuite(TestDijkstra))
     test_suite.addTest(unittest.makeSuite(TestBinaryTrees))
     test_suite.addTest(unittest.makeSuite(TestLongSimplePath))
+    test_suite.addTest(unittest.makeSuite(TestComplementGraph))
     return test_suite
 
 if __name__ == '__main__':
