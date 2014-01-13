@@ -9,10 +9,11 @@ def long_and_simple_path(graph, node1, node2, link):
     v: ending node
     l: minimum length of path
     """
-    if not long_and_simple_decision(graph, node1, node2, link):
+    simple_path = long_and_simple_decision(graph, node1, node2, link)
+    if simple_path is None:
         return False
     else:
-        return None
+        return simple_path
 
 
 def make_link(graph, node1, node2):
@@ -72,6 +73,6 @@ def long_and_simple_decision(graph, node1, node2, link):
     for perm in perms:
         # check path
         if len(perm) >= link and check_path(graph, perm) and perm[0] == node1 and perm[len(perm)-1] == node2:
-            return True
-    return False
+            return perm
+    return None
 
