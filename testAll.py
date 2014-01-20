@@ -46,6 +46,7 @@ from tests.graphs.longSimplePathTest import TestLongSimplePath
 from tests.graphs.complementGraphTest import TestComplementGraph
 from tests.string.firstNonRepeatedCharTest import TestFirstNonRepeatedChar
 from tests.string.removeStringTest import TestRemoveString
+from tests.string.permutationsTest import TestPermutations
 
 
 def suite():
@@ -96,6 +97,7 @@ def suite():
     test_suite.addTest(unittest.makeSuite(TestComplementGraph))
     test_suite.addTest(unittest.makeSuite(TestFirstNonRepeatedChar))
     test_suite.addTest(unittest.makeSuite(TestRemoveString))
+    test_suite.addTest(unittest.makeSuite(TestPermutations))
     return test_suite
 
 if __name__ == '__main__':
