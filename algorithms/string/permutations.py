@@ -1,16 +1,16 @@
 __author__ = 'bruno'
 
 
-def permutations(string):
+def recursive_permutations(string):
     length = len(string)
     used = [False]*length
     out = ''
     out_array = []
-    p(string, used, length, out, out_array)
+    rec_permutations(string, used, length, out, out_array)
     return out_array
 
 
-def p(string, used, length, out, out_array):
+def rec_permutations(string, used, length, out, out_array):
     i = 0
     if len(out) == len(string):
         out_array.append(out)
@@ -20,7 +20,7 @@ def p(string, used, length, out, out_array):
             continue
         out += string[i]
         used[i] = True
-        p(string, used, length, out, out_array)
+        rec_permutations(string, used, length, out, out_array)
         used[i] = False
         out = out[:-1]
         i += 1

@@ -8,19 +8,19 @@ class TestPermutations(unittest.TestCase):
         pass
 
     def test_permutations_1(self):
-        self.assertEqual(['a'], Permutations.permutations('a'))
+        self.assertEqual(['a'], Permutations.recursive_permutations('a'))
 
     def test_permutations_2(self):
-        self.assertEqual(['aa', 'aa'], Permutations.permutations('aa'))
+        self.assertEqual(['aa', 'aa'], Permutations.recursive_permutations('aa'))
 
     def test_permutations_3(self):
-        self.assertEqual(['abc', 'acb', 'bac', 'bca', 'cab', 'cba'], Permutations.permutations('abc'))
+        self.assertEqual(['abc', 'acb', 'bac', 'bca', 'cab', 'cba'], Permutations.recursive_permutations('abc'))
 
     def test_permutations_4(self):
         out_array = ['abcd', 'abdc', 'acbd', 'acdb', 'adbc', 'adcb', 'bacd', 'badc', 'bcad', 'bcda',
                      'bdac', 'bdca', 'cabd', 'cadb', 'cbad', 'cbda', 'cdab', 'cdba', 'dabc', 'dacb',
                      'dbac', 'dbca', 'dcab', 'dcba']
-        self.assertEqual(out_array, Permutations.permutations('abcd'))
+        self.assertEqual(out_array, Permutations.recursive_permutations('abcd'))
 
     def test_permutations_5(self):
         out_array = ['aeiou', 'aeiuo', 'aeoiu', 'aeoui', 'aeuio', 'aeuoi', 'aieou', 'aieuo', 'aioeu',
@@ -37,4 +37,4 @@ class TestPermutations(unittest.TestCase):
                      'uaioe', 'uaoei', 'uaoie', 'ueaio', 'ueaoi', 'ueiao', 'ueioa', 'ueoai', 'ueoia',
                      'uiaeo', 'uiaoe', 'uieao', 'uieoa', 'uioae', 'uioea', 'uoaei', 'uoaie', 'uoeai',
                      'uoeia', 'uoiae', 'uoiea']
-        self.assertEqual(out_array, Permutations.permutations('aeiou'))
+        self.assertEqual(out_array, Permutations.recursive_permutations('aeiou'))
