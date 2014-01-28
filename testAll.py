@@ -48,6 +48,7 @@ from tests.string.firstNonRepeatedCharTest import TestFirstNonRepeatedChar
 from tests.string.removeStringTest import TestRemoveString
 from tests.string.permutationsTest import TestPermutations
 from tests.string.combinationsTest import TestCombinations
+from tests.string.telephoneStringTest import TestTelephoneString
 
 
 def suite():
@@ -100,6 +101,7 @@ def suite():
     test_suite.addTest(unittest.makeSuite(TestRemoveString))
     test_suite.addTest(unittest.makeSuite(TestPermutations))
     test_suite.addTest(unittest.makeSuite(TestCombinations))
+    test_suite.addTest(unittest.makeSuite(TestTelephoneString))
     return test_suite
 
 if __name__ == '__main__':
