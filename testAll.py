@@ -49,6 +49,7 @@ from tests.string.removeStringTest import TestRemoveString
 from tests.string.permutationsTest import TestPermutations
 from tests.string.combinationsTest import TestCombinations
 from tests.string.telephoneStringTest import TestTelephoneString
+from tests.graphs.bipartiteTest import TestBipartite
 
 
 def suite():
@@ -102,6 +103,8 @@ def suite():
     test_suite.addTest(unittest.makeSuite(TestPermutations))
     test_suite.addTest(unittest.makeSuite(TestCombinations))
     test_suite.addTest(unittest.makeSuite(TestTelephoneString))
+    test_suite.addTest(unittest.makeSuite(TestBipartite))
+
     return test_suite
 
 if __name__ == '__main__':
