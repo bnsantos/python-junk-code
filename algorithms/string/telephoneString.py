@@ -41,3 +41,51 @@ def telephone_words_recursive(telephone, current_digit, phone_words, current_wor
         if telephone[current_digit] == '0' or telephone[current_digit] == '1':
             return
         i += 1
+
+
+def is_done(digit_indexes):
+    for index in digit_indexes:
+        if index != 2 and index != -1:
+            return False
+    return True
+
+
+def get_word(telephone, digit_indexes):
+    word = ''
+    i = 0
+    while i < len(telephone):
+        word += get_char_key(telephone[i], digit_indexes[i])
+        i += 1
+    return word
+
+
+def increase_digits(digit_indexes):
+    to_carry = True
+    i = len(digit_indexes) - 1
+
+    while to_carry and i >= 0:
+        if digit_indexes[i] == 2:
+            digit_indexes[i] = 0
+            i -= 1
+        elif digit_indexes[i] == -1:
+            i -= 1
+        else:
+            to_carry = False
+            digit_indexes[i] += 1
+
+
+def print_telephone_words_iterative(telephone):
+    phone_words = []
+    digit_indexes = []
+    for digit in telephone:
+        if digit != '0' and digit != '1':
+            digit_indexes.append(0)
+        else:
+            digit_indexes.append(-1)
+
+    done = False
+    while not done:
+        done = is_done(digit_indexes)
+        phone_words.append(get_word(telephone, digit_indexes))
+        increase_digits(digit_indexes)
+    return phone_words
