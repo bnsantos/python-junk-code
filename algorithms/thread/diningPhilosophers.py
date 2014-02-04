@@ -12,6 +12,8 @@ class Philosopher(threading.Thread):
         self._id = _id
         self.fork1 = fork1
         self.fork2 = fork2
+        self.trials = 0
+        self.dinners = 0
 
     def run(self):
         while self.running:
@@ -22,6 +24,7 @@ class Philosopher(threading.Thread):
     def dine(self):
         fork1, fork2 = self.fork1, self.fork2
         while self.running:
+            self.trials += 1
             fork1.acquire(True)
             locked = fork2.acquire(False)
             if locked:
@@ -30,6 +33,7 @@ class Philosopher(threading.Thread):
             print 'Philosopher %s swapping forks. ' % self._id
             fork1, fork2 = fork2, fork1
         else:
+            print '**Philosopher %s done eating. ' % self._id
             return
 
         self.dining()
@@ -38,8 +42,12 @@ class Philosopher(threading.Thread):
 
     def dining(self):
         print 'Philosopher %s starts eating ' % self._id
+        self.dinners += 1
         time.sleep(random.uniform(1, 5))
         print 'Philosopher %s finishes eating and leaves to think. ' % self._id
+
+    def how_much(self):
+        print 'Philosopher %s tried to eat %d but only ate %d. ' % (self._id, self.trials, self.dinners)
 
 
 def dining_philosophers():
@@ -53,9 +61,12 @@ def dining_philosophers():
     Philosopher.running = True
     for p in philosophers:
         p.start()
-    time.sleep(40)
+    time.sleep(60)
     Philosopher.running = False
-    print ("Now we're finishing.")
+    print ("-----Now we're finishing.")
+    time.sleep(5)
+    for p in philosophers:
+        p.how_much()
 
 if __name__ == "__main__":
     dining_philosophers()
