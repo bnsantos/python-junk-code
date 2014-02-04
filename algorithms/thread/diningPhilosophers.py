@@ -15,7 +15,7 @@ class Philosopher(threading.Thread):
 
     def run(self):
         while self.running:
-            time.sleep(random.uniform(3, 13))
+            time.sleep(random.uniform(1, 5))
             print 'Philosopher %s is hungry.' % self._id
             self.dine()
 
@@ -38,20 +38,22 @@ class Philosopher(threading.Thread):
 
     def dining(self):
         print 'Philosopher %s starts eating ' % self._id
-        time.sleep(random.uniform(1, 10))
+        time.sleep(random.uniform(1, 5))
         print 'Philosopher %s finishes eating and leaves to think. ' % self._id
 
 
 def dining_philosophers():
-    forks = [threading.Lock() for n in range(5)]
-    philosopher_names = ('Aristotle', 'Kant', 'Buddha', 'Marx', 'Russel')
-    philosophers = [Philosopher(philosopher_names[i], forks[i % 5], forks[(i+1) % 5]) for i in range(5)]
+    philosopher_names = ('Aristotle', 'Kant', 'Buddha', 'Marx', 'Russel', 'Adam Smith', 'Plato', 'Confucius',
+                         'Friedrich Nietzsche', 'Other')
+    forks = [threading.Lock() for n in range(len(philosopher_names))]
+    philosophers = [Philosopher(philosopher_names[i], forks[i % len(philosopher_names)],
+                                forks[(i+1) % len(philosopher_names)]) for i in range(len(philosopher_names))]
 
     random.seed(507129)
     Philosopher.running = True
     for p in philosophers:
         p.start()
-    time.sleep(20)
+    time.sleep(40)
     Philosopher.running = False
     print ("Now we're finishing.")
 
